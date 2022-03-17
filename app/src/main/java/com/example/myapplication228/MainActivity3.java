@@ -1,11 +1,16 @@
 package com.example.myapplication228;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -14,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity3 extends ListActivity {
 
     // fonte de dados
-    String[] CORES = new String[]{"Tela 1", "Tela  2", "Tela 3", "Tela  4"};
+    String[] CORES = new String[]{"Tela 1", "Tela  2", "Tela 3", "Tela  Radio sem Listener", "Tela Radio com Listener", "Intent com conteúdo"};
 
     Intent intent;
 
@@ -30,6 +35,8 @@ public class MainActivity3 extends ListActivity {
                android.R.layout.simple_list_item_1, CORES);
 
         setListAdapter(meuArrayAdapter);
+
+
 
     }
 
@@ -51,18 +58,36 @@ public class MainActivity3 extends ListActivity {
             case 2:
                 AlertDialog.Builder janela = new AlertDialog.Builder(this);
                 janela.setTitle("Título da Janela de Diálogo");
-                janela.setMessage("Mensagem da janela de Diálogo");
-                janela.setNeutralButton("Ok", null);
+                janela.setMessage("Mudar de tela?");
+                //janela.setNeutralButton("Ok", null);
+                janela.setNegativeButton("Cancelar", null);
+                janela.setPositiveButton("Ok", mOuvinte);
                 janela.show();
 
-                intent = new Intent(MainActivity3.this, MainActivity4.class );
-                startActivity(intent);
                 break;
 
+            case 3:
+                intent = new Intent(MainActivity3.this, MainActivity5.class);
+                startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(MainActivity3.this, MainActivity4.class);
+                startActivity(intent);
+                break;
+            case 5:
+                intent = new Intent(MainActivity3.this, MainActivity6.class);
+                startActivity(intent);
+                break;
         }
-
-
     }
+
+    DialogInterface.OnClickListener mOuvinte = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+
+        }
+    };
+
 }
 
 //Exemplo de toast
