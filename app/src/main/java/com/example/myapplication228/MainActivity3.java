@@ -19,7 +19,7 @@ import android.widget.Toast;
 public class MainActivity3 extends ListActivity {
 
     // fonte de dados
-    String[] CORES = new String[]{"Tela 1", "Tela  2", "Tela 3", "Tela  Radio sem Listener", "Tela Radio com Listener", "Intent com conteúdo"};
+    String[] CORES = new String[]{"Tela 1", "Tela  2", "Tela 3", "Tela  Radio sem Listener", "Tela Radio com Listener", "Intent com conteúdo", "Tela CheckBox", "Tela Spinner"};
 
     Intent intent;
 
@@ -32,11 +32,9 @@ public class MainActivity3 extends ListActivity {
 
         //setar/configurar/instanciar o arrayadapter
         meuArrayAdapter = new ArrayAdapter<>(this,
-               android.R.layout.simple_list_item_1, CORES);
+               R.layout.minhalista, CORES);
 
         setListAdapter(meuArrayAdapter);
-
-
 
     }
 
@@ -76,6 +74,14 @@ public class MainActivity3 extends ListActivity {
                 break;
             case 5:
                 intent = new Intent(MainActivity3.this, MainActivity6.class);
+                startActivity(intent);
+                break;
+            case 6:
+                intent = new Intent(MainActivity3.this, MainActivity7.class);
+                startActivity(intent);
+                break;
+            case 7:
+                intent = new Intent(MainActivity3.this, MainActivity8.class);
                 startActivity(intent);
                 break;
         }

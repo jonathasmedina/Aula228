@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudio/sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.13518518518518519" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main3.xml" value="0.17083333333333334" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main4.xml" value="0.5" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main5.xml" value="0.33" />
         <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main6.xml" value="0.33" />
+        <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main7.xml" value="0.25" />
+        <entry key="..\:/MyApplication228/app/src/main/res/layout/activity_main8.xml" value="0.21" />
+        <entry key="..\:/MyApplication228/app/src/main/res/layout/minhalista.xml" value="0.12314814814814815" />
       </map>
     </option>
   </component>
